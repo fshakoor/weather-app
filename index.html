@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Type your search here">
+            <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="content">
+        <div class="city-name">Houston</div>
+        <div class="current-weather-info">
+            <div class="temp-and-conditions-container">
+                <div class="temp">87ºF</div>
+                <div class="conditions">Broken Clouds</div>
+            </div>
+            <div class="additional-info">
+                <div class="feels-like">
+                    <div class="feels-like-label">Feels Like</div>
+                    <div class="feels-like-value">99.3ºF</div>
+                </div>
+                <div class="humidity">
+                    <div class="humidity-label">Humidity</div>
+                    <div class="humidity-value">77.0%</div>
+                </div>
+                <div class="chance-of-rain">
+                    <div class="chance-of-rain-label">Chance of Rain</div>
+                    <div class="chance-of-rain-value">0.0%</div>
+                </div>
+                <div class="wind-speed">
+                    <div class="wind-speed-label">Wind Speed</div>
+                    <div class="wind-speed-value">37.3 Km/h</div>
+                </div>
+            </div>
+        </div>
+        <div class="twenty-four-hour-forecast">
+            <div class="twenty-four-hour-forecast-label">24 Hour Forecast</div>
+            <div class="twenty-four-hour-forecast-data"></div>
+        </div>
+      </div>
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

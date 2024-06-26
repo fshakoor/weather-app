@@ -1,0 +1,68 @@
+* {
+    font-family: 'Roboto','Helvetica';
+}
+
+body, .container {
+    height: 100vh;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 20fr;
+    width: 100vw;
+}
+
+.header {
+
+}
+
+.header, .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: gray;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.city-name,.temp-and-conditions-container, .additional-info,.twenty-four-hour-forecast {
+    color: white;
+}
+
+.city-name, .temp-and-conditions-container, .twenty-four-hour-forecast {
+    font-weight: 700;
+}
+
+.city-name {
+    font-size: 5vw;
+}
+
+.temp-and-conditions-container {
+    font-size: 3vw;
+}
+
+.additional-info {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.temp-and-conditions-container, .additional-info {
+    display: flex;
+    gap: 3vw;
+}
+
+.feels-like, .humidity, .chance-of-rain, .wind-speed {
+    text-align: center;
+}
+
+.twenty-four-hour-forecast {
+    font-size: 2vw;
+}
