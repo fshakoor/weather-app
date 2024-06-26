@@ -41,15 +41,15 @@ body {
 }
 
 .city-name {
-    font-size: 5vw;
+    font-size: 5rem;
 }
 
 .temp-and-conditions-container {
-    font-size: 3vw;
+    font-size: 3rem;
 }
 
 .additional-info {
-    font-size: 1vw;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -64,7 +64,13 @@ body {
 }
 
 .twenty-four-hour-forecast {
-    font-size: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.twenty-four-hour-forecast-label {
+    font-size: 2rem;
 }
 
 #searchForm {
@@ -72,29 +78,39 @@ body {
     gap: 10px;
 }
 
-#searchInput {
+#searchInput, #searchForm button {
     background-color: transparent;
     color: white;
 }
 
-#searchInput:focus {
+#searchInput:focus, #searchForm button:hover {
     background-color: white;
     color: #000046;
 }
 
-#searchForm button {
-    border-radius: 8px;
-}
-
 #searchForm button:hover {
     cursor: pointer;
-    background-color: transparent;
-    color: white;
 }
 
 #searchInput, #searchForm button {
+    border-radius: 8px;
     outline:none;
-    border: white, 1px, solid;
-    padding: 8px;
+    border: white, 2px, solid;
+    padding: 10px 12px;
     font-weight: 500;
+}
+
+.twenty-four-hour-forecast-data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0px 50px;
+    justify-items: center;
+}
+
+.forecast-hour-container {
+    display: flex;
+    font-size: 1rem;
+    gap: 15px;
+    align-items: center;
 }
