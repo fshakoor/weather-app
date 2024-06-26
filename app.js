@@ -1,28 +1,40 @@
-// let cityName = document.querySelector(".city-name");
-// let temperature = document.querySelector(".temp");
-// let conditions = document.querySelector(".conditions");
-// let feelsLike = document.querySelector(".feels-like-value");
-// let humidity = document.querySelector(".humidity-value");
-// let chanceOfRain = document.querySelector(".chance-of-rain-value");
-// let windSpeed = document.querySelector(".wind-speed-value");
+let cityName = document.querySelector(".city-name");
+let temperature = document.querySelector(".temp");
+let conditionsIcon = document.querySelector(".conditions-icon");
+let conditions = document.querySelector(".conditions");
+let feelsLike = document.querySelector(".feels-like-value");
+let humidity = document.querySelector(".humidity-value");
+let windSpeed = document.querySelector(".wind-speed-value");
+let localTime = document.querySelector(".local-time")
 let twentyFourHourForecastData = document.querySelector(
   ".twenty-four-hour-forecast-data"
 );
 
-// async function getWeatherData(city) {
-//     let searchedCity = city
-//   const response = await fetch(
-//     "http://api.weatherapi.com/v1/forecast.json?key=207599b971564ec4905144139242606&q=" + searchedCity + "&days=3&aqi=yes&alerts=yes",
-//     { mode: "cors" }
-//   );
-//   const weatherData = await response.json();
-//   console.log(weatherData);
-// }
+async function getWeatherData(city) {
+    let searchedCity = city
+  const response = await fetch(
+    "http://api.weatherapi.com/v1/forecast.json?key=207599b971564ec4905144139242606&q=" + searchedCity + "&days=3&aqi=yes&alerts=yes",
+    { mode: "cors" }
+  );
+  const weatherData = await response.json();
+  cityName.innerHTML = weatherData.location.name + ", " + weatherData.location.country
+  temperature.innerHTML = weatherData.current.temp_f + "ºF"
+  conditionsIcon.src = weatherData.current.condition.icon
+  conditions.innerHTML = weatherData.current.condition.text
+  feelsLike.innerHTML = weatherData.current.feelslike_f + "ºF"
+  humidity.innerHTML = weatherData.current.humidity + "%"
+  windSpeed.innerHTML = weatherData.current.wind_mph + " mph"
+  localTime.innerHTML = "Local Time: " + weatherData.location.localtime.slice(weatherData.location.localtime.length-5,weatherData.location.localtime.length)
+}
+
+let city = 'London'
+getWeatherData(city)
 
 // document.getElementById('searchForm').addEventListener('submit', function(event) {
 //     event.preventDefault();
 //     var searchText = document.getElementById('searchInput').value;
-//     getWeatherData(searchText);
+//     let myData = getWeatherData(searchText);
+//     console.log(myData)
 // });
 
 const forecast = {
@@ -3845,8 +3857,6 @@ const forecast = {
     alert: [],
   },
 };
-
-console.log(forecast.location.localtime);
 
 let counter = 0
 let twentyfourhourforecast = []

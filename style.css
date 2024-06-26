@@ -32,7 +32,7 @@ body {
     gap: 5vh;
 }
 
-.city-name,.temp-and-conditions-container, .additional-info,.twenty-four-hour-forecast {
+.city-name,.temp-and-conditions-container, .additional-info,.twenty-four-hour-forecast, .local-time {
     color: white;
 }
 
@@ -40,8 +40,20 @@ body {
     font-weight: 700;
 }
 
+.city-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .city-name {
     font-size: 7rem;
+}
+
+.local-time {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .temp-and-conditions-container {
@@ -60,7 +72,7 @@ body {
     gap: 5vw;
 }
 
-.feels-like, .humidity, .chance-of-rain, .wind-speed {
+.feels-like, .humidity, .wind-speed {
     text-align: center;
 }
 
@@ -123,4 +135,10 @@ body {
     justify-content: center;
     align-items: center;
     /* flex-direction: column; */
+}
+
+.current-weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 }
