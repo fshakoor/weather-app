@@ -41,11 +41,12 @@ body {
 }
 
 .city-name {
-    font-size: 5rem;
+    font-size: 7rem;
 }
 
 .temp-and-conditions-container {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    gap: 2vh;
 }
 
 .additional-info {
@@ -67,10 +68,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1vh;
 }
 
 .twenty-four-hour-forecast-label {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 #searchForm {
@@ -113,4 +115,12 @@ body {
     font-size: 1rem;
     gap: 15px;
     align-items: center;
+}
+
+.conditions-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
 }
