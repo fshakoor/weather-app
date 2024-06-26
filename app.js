@@ -1,16 +1,14 @@
-// async function getWeatherData() {
-//   const response = await fetch(
-//     "http://api.weatherapi.com/v1/forecast.json?key=207599b971564ec4905144139242606&q=London&days=3&aqi=yes&alerts=yes",
-//     { mode: "cors" }
-//   );
-//   const weatherData = await response.json();
-//   console.log(weatherData);
-// }
-
-// getWeatherData()
+async function getWeatherData() {
+  const response = await fetch(
+    "http://api.weatherapi.com/v1/forecast.json?key=207599b971564ec4905144139242606&q=London&days=3&aqi=yes&alerts=yes",
+    { mode: "cors" }
+  );
+  const weatherData = await response.json();
+  console.log(weatherData);
+}
 
 document.getElementById('searchForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents the form from submitting and refreshing the page
+    event.preventDefault();
     var searchText = document.getElementById('searchInput').value;
     console.log(searchText); // Logs the input text to the console
 });

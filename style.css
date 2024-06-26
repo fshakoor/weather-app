@@ -7,7 +7,7 @@ body, .container {
 }
 
 body {
-    background-color: black;
+    background-image: linear-gradient(180deg, #000046 0%, #4f1c96, 50%, #1cb5e0 100%);
     margin: 0;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-
+    padding-top: 50px;
 }
 
 .header, .content {
@@ -28,7 +28,6 @@ body {
 }
 
 .content {
-    background-color: gray;
     flex-direction: column;
     gap: 5vh;
 }
@@ -55,8 +54,9 @@ body {
 }
 
 .temp-and-conditions-container, .additional-info {
+    justify-content: center;
     display: flex;
-    gap: 3vw;
+    gap: 5vw;
 }
 
 .feels-like, .humidity, .chance-of-rain, .wind-speed {
@@ -65,4 +65,36 @@ body {
 
 .twenty-four-hour-forecast {
     font-size: 2vw;
+}
+
+#searchForm {
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    background-color: transparent;
+    color: white;
+}
+
+#searchInput:focus {
+    background-color: white;
+    color: #000046;
+}
+
+#searchForm button {
+    border-radius: 8px;
+}
+
+#searchForm button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+
+#searchInput, #searchForm button {
+    outline:none;
+    border: white, 1px, solid;
+    padding: 8px;
+    font-weight: 500;
 }
