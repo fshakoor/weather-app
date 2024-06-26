@@ -1,148 +1,168 @@
 * {
-    font-family: 'Roboto','Helvetica';
+  font-family: "Roboto", "Helvetica";
 }
 
-body, .container {
-    height: 100vh;
+body,
+.container {
+  height: 100vh;
 }
 
 body {
-    background-image: linear-gradient(180deg, #000046 0%, #4f1c96, 50%, #1cb5e0 100%);
-    margin: 0;
+  background-image: linear-gradient(
+    180deg,
+    #000046 0%,
+    #4f1c96,
+    50%,
+    #1cb5e0 100%
+  );
+  margin: 0;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 1fr 20fr;
-    width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr 20fr;
+  width: 100vw;
 }
 
 .header {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
-.header, .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header,
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    flex-direction: column;
-    gap: 5vh;
+  flex-direction: column;
+  gap: 5vh;
 }
 
-.city-name,.temp-and-conditions-container, .additional-info,.twenty-four-hour-forecast, .local-time {
-    color: white;
+.city-name,
+.temp-and-conditions-container,
+.additional-info,
+.twenty-four-hour-forecast,
+.local-time {
+  color: white;
 }
 
-.city-name, .temp-and-conditions-container, .twenty-four-hour-forecast {
-    font-weight: 700;
+.city-name,
+.temp-and-conditions-container,
+.twenty-four-hour-forecast {
+  font-weight: 700;
 }
 
 .city-info {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .city-name {
-    font-size: 4rem;
-    /* max-width: 90%; */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-wrap: nowrap;
+  font-size: 4rem;
+  /* max-width: 90%; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 .local-time {
-    font-size: 1.5rem;
-    font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .temp-and-conditions-container {
-    font-size: 2.5rem;
-    gap: 2vh;
+  font-size: 2.5rem;
+  gap: 2vh;
 }
 
 .additional-info {
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.temp-and-conditions-container, .additional-info {
-    justify-content: center;
-    display: flex;
-    gap: 5vw;
+.temp-and-conditions-container,
+.additional-info {
+  justify-content: center;
+  display: flex;
+  gap: 5vw;
 }
 
-.feels-like, .humidity, .wind-speed {
-    text-align: center;
+.feels-like,
+.humidity,
+.wind-speed {
+  text-align: center;
 }
 
 .twenty-four-hour-forecast {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
 }
 
 .twenty-four-hour-forecast-label {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 #searchForm {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-#searchInput, #searchForm button {
-    background-color: transparent;
-    color: white;
+#searchInput,
+#searchForm button {
+  background-color: transparent;
+  color: white;
 }
 
-#searchInput:focus, #searchForm button:hover {
-    background-color: white;
-    color: #000046;
+#searchInput:focus,
+#searchForm button:hover {
+  background-color: white;
+  color: #000046;
 }
 
 #searchForm button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-#searchInput, #searchForm button {
-    border-radius: 8px;
-    outline:none;
-    border: white, 2px, solid;
-    padding: 10px 12px;
-    font-weight: 500;
+#searchInput,
+#searchForm button {
+  border-radius: 8px;
+  outline: none;
+  border: white, 2px, solid;
+  padding: 10px 12px;
+  font-weight: 500;
 }
 
 .twenty-four-hour-forecast-data {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 0px 50px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0px 50px;
+  justify-items: center;
 }
 
 .forecast-hour-container {
-    display: flex;
-    font-size: 1rem;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  font-size: 1rem;
+  gap: 15px;
+  align-items: center;
 }
 
 .conditions-container {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
 }
 
 .current-weather-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
