@@ -28,15 +28,14 @@ async function getWeatherData(city) {
   getTwentyFourHourForecast(weatherData)
 }
 
-let city = 'Houston'
+let city = 'Chicago'
 getWeatherData(city)
 
-// document.getElementById('searchForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     var searchText = document.getElementById('searchInput').value;
-//     let myData = getWeatherData(searchText);
-//     console.log(myData)
-// });
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var searchText = document.getElementById('searchInput').value;
+    getWeatherData(searchText)
+});
 
 async function getTwentyFourHourForecast(weatherData) {
     let forecast = weatherData
@@ -56,6 +55,10 @@ async function getTwentyFourHourForecast(weatherData) {
     }
     
     twentyfourhourforecast = twentyfourhourforecast.slice(0,24)
+
+    while (twentyFourHourForecastData.firstChild) {
+        twentyFourHourForecastData.removeChild(twentyFourHourForecastData.firstChild);
+    }
     
     twentyfourhourforecast.forEach(element => {
         let time = element.time

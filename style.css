@@ -48,7 +48,11 @@ body {
 }
 
 .city-name {
-    font-size: 5rem;
+    font-size: 4rem;
+    /* max-width: 90%; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
 }
 
 .local-time {
